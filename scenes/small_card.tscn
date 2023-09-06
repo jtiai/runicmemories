@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvimcbjev44pt"]
+
+[ext_resource type="Script" path="res://scenes/card.gd" id="1_olgmk"]
+[ext_resource type="Texture2D" uid="uid://btepfao5a13uy" path="res://assets/white-blobs-dark-blue-water.jpg" id="2_p8qyr"]
+[ext_resource type="Texture2D" uid="uid://c6ekj1cl58b0p" path="res://assets/7811.jpg" id="3_7qs3k"]
+[ext_resource type="Texture2D" uid="uid://c5ssu2js6kgoc" path="res://assets/card_border.png" id="4_1o3bm"]
+[ext_resource type="FontFile" uid="uid://c7w32h0tibw3u" path="res://assets/BabelStoneRunic.ttf" id="5_5sqhk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1l5kw"]
+
+[sub_resource type="Theme" id="Theme_juwj5"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 84
+Label/fonts/font = ExtResource("5_5sqhk")
+Label/styles/normal = SubResource("StyleBoxEmpty_1l5kw")
+
+[node name="SmallCard" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1046.0
+offset_bottom = -482.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(53, 83)
+script = ExtResource("1_olgmk")
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(106, 166)
+layout_mode = 2
+texture = ExtResource("2_p8qyr")
+expand_mode = 1
+
+[node name="Foreground" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(106, 166)
+layout_mode = 2
+texture = ExtResource("3_7qs3k")
+expand_mode = 1
+
+[node name="Border" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("4_1o3bm")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource("Theme_juwj5")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

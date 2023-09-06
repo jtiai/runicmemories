@@ -1,0 +1,161 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtt0r26114stw"]
+
+[ext_resource type="PackedScene" uid="uid://ce8x2w8asp2rb" path="res://scenes/tiny_card.tscn" id="1_buhpv"]
+
+[node name="GameAreaLarge" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 12
+
+[node name="SmallCard1" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard2" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard3" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard4" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard5" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard6" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard7" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard8" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard9" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard10" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard11" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard12" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard13" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard14" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard15" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard16" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard17" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard18" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard19" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard20" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard21" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard22" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard23" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard24" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard25" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard26" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard27" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard28" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard29" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard30" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard31" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard32" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard33" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard34" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard35" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard36" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard37" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard38" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard39" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard40" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard41" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard42" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard43" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard44" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard45" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard46" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard47" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2
+
+[node name="SmallCard48" parent="CenterContainer/GridContainer" instance=ExtResource("1_buhpv")]
+layout_mode = 2

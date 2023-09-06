@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://cl6jucwxj6csl"]
+
+[ext_resource type="Script" path="res://scenes/difficulty_spinner.gd" id="2_uxkwl"]
+
+[sub_resource type="Theme" id="Theme_y4y84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5nu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r0sfa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bf4k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xptt7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v22ch"]
+
+[sub_resource type="Theme" id="Theme_womk2"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_q5nu5")
+Button/styles/focus = SubResource("StyleBoxEmpty_r0sfa")
+Button/styles/hover = SubResource("StyleBoxEmpty_6bf4k")
+Button/styles/normal = SubResource("StyleBoxEmpty_xptt7")
+Button/styles/pressed = SubResource("StyleBoxEmpty_v22ch")
+
+[sub_resource type="Theme" id="Theme_rq5n4"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_q5nu5")
+Button/styles/focus = SubResource("StyleBoxEmpty_r0sfa")
+Button/styles/hover = SubResource("StyleBoxEmpty_6bf4k")
+Button/styles/normal = SubResource("StyleBoxEmpty_xptt7")
+Button/styles/pressed = SubResource("StyleBoxEmpty_v22ch")
+
+[node name="DifficultySpinner" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme = SubResource("Theme_y4y84")
+script = ExtResource("2_uxkwl")
+
+[node name="LeftButton" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+theme = SubResource("Theme_womk2")
+text = "◀"
+
+[node name="Value" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightButton" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+theme = SubResource("Theme_rq5n4")
+text = "▶"
+
+[connection signal="focus_entered" from="LeftButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="mouse_entered" from="LeftButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="focus_entered" from="Value" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="mouse_entered" from="Value" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="pressed" from="Value" to="." method="_on_right_button_pressed"]
+[connection signal="focus_entered" from="RightButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="mouse_entered" from="RightButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

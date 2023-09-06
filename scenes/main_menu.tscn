@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://d3g5hk52kh2x7"]
+
+[ext_resource type="FontFile" uid="uid://bivluvkuitjx" path="res://assets/Coiny-Cyrillic.ttf" id="1_rm1fp"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="2_00l38"]
+[ext_resource type="PackedScene" uid="uid://cl6jucwxj6csl" path="res://scenes/difficulty_spinner.tscn" id="2_fbu6o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56ha1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_305dd"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.701961, 0.462745, 0.266667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tipx"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.701961, 0.462745, 0.266667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55mpb"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v72t0"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.490196, 0.376471, 0.0823529, 1)
+
+[sub_resource type="Theme" id="Theme_8lvua"]
+default_font = ExtResource("1_rm1fp")
+Button/colors/font_color = Color(1, 0.427451, 0.878431, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0)
+Button/font_sizes/font_size = 64
+Button/styles/disabled = SubResource("StyleBoxEmpty_56ha1")
+Button/styles/focus = SubResource("StyleBoxFlat_305dd")
+Button/styles/hover = SubResource("StyleBoxFlat_0tipx")
+Button/styles/normal = SubResource("StyleBoxFlat_55mpb")
+Button/styles/pressed = SubResource("StyleBoxFlat_v72t0")
+Label/colors/font_color = Color(1, 0.427451, 0.878431, 1)
+Label/font_sizes/font_size = 64
+
+[node name="MainMenu" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8lvua")
+script = ExtResource("2_00l38")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="StartContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer/StartContainer"]
+layout_mode = 2
+text = "START"
+
+[node name="DifficultyContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DifficultySpinner" parent="VBoxContainer/DifficultyContainer" instance=ExtResource("2_fbu6o")]
+layout_mode = 2
+
+[node name="HighscoreContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HighscoreButton" type="Button" parent="VBoxContainer/HighscoreContainer"]
+layout_mode = 2
+focus_mode = 0
+disabled = true
+text = "HIGHSCORES"
+
+[node name="QuitContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 64
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/QuitContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="focus_entered" from="VBoxContainer/StartContainer/StartButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/StartContainer/StartButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/StartContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/HighscoreContainer/HighscoreButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/HighscoreContainer/HighscoreButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="focus_entered" from="VBoxContainer/QuitContainer/QuitButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/QuitContainer/QuitButton" to="." method="_on_button_focus_or_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/QuitContainer/QuitButton" to="." method="_on_quit_button_pressed"]

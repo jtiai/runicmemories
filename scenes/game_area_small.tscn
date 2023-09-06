@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://fdspx1q4whqv"]
+
+[ext_resource type="PackedScene" uid="uid://cvimcbjev44pt" path="res://scenes/small_card.tscn" id="1_upgmr"]
+
+[node name="GameAreaSmall" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="Card1" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card2" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card3" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card4" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card5" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card6" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card7" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card8" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card9" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card10" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card11" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2
+
+[node name="Card12" parent="CenterContainer/GridContainer" instance=ExtResource("1_upgmr")]
+layout_mode = 2

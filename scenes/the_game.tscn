@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6lr88bdrcr5u"]
+
+[ext_resource type="Script" path="res://scenes/the_game.gd" id="1_d7o1n"]
+[ext_resource type="FontFile" uid="uid://bivluvkuitjx" path="res://assets/Coiny-Cyrillic.ttf" id="1_i27j6"]
+[ext_resource type="PackedScene" uid="uid://fdspx1q4whqv" path="res://scenes/game_area_small.tscn" id="1_ik1yj"]
+[ext_resource type="PackedScene" uid="uid://ch0eeppqrsdfg" path="res://scenes/game_area_medium.tscn" id="4_s0mmo"]
+[ext_resource type="PackedScene" uid="uid://dtt0r26114stw" path="res://scenes/game_area_large.tscn" id="5_u7ovh"]
+[ext_resource type="PackedScene" uid="uid://d3g5hk52kh2x7" path="res://scenes/main_menu.tscn" id="6_jy72o"]
+
+[sub_resource type="Theme" id="Theme_g7y5e"]
+default_font = ExtResource("1_i27j6")
+
+[sub_resource type="Theme" id="Theme_28mks"]
+Label/font_sizes/font_size = 48
+
+[sub_resource type="Theme" id="Theme_nh4ir"]
+Label/colors/font_outline_color = Color(0.698039, 0.533333, 0.337255, 1)
+Label/colors/font_shadow_color = Color(0.137255, 0.0705882, 0.721569, 0.623529)
+Label/constants/outline_size = 24
+Label/constants/shadow_offset_x = 8
+Label/constants/shadow_offset_y = 8
+Label/constants/shadow_outline_size = 16
+Label/font_sizes/font_size = 128
+Label/fonts/font = ExtResource("1_i27j6")
+
+[node name="TheGame" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_g7y5e")
+script = ExtResource("1_d7o1n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="GameStatsContainer" type="MarginContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GameStatsContainer"]
+layout_mode = 2
+theme = SubResource("Theme_28mks")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GameStatsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/GameStatsContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Time left: "
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer/GameStatsContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/GameStatsContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GameStatsContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Score: "
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer/GameStatsContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+horizontal_alignment = 2
+
+[node name="GameAreaSmall" parent="VBoxContainer" instance=ExtResource("1_ik1yj")]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="GameAreaMedium" parent="VBoxContainer" instance=ExtResource("4_s0mmo")]
+visible = false
+layout_mode = 2
+
+[node name="GameAreaLarge" parent="VBoxContainer" instance=ExtResource("5_u7ovh")]
+visible = false
+layout_mode = 2
+
+[node name="MainMenu" parent="." instance=ExtResource("6_jy72o")]
+visible = false
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_nh4ir")
+
+[node name="TimeOutLabel" type="Label" parent="CenterContainer"]
+visible = false
+layout_mode = 2
+text = "Time out"
+
+[node name="CongratulationsLabel" type="Label" parent="CenterContainer"]
+visible = false
+layout_mode = 2
+text = "Congratulations!"
+
+[connection signal="start_game" from="MainMenu" to="." method="_on_main_menu_start_game"]
